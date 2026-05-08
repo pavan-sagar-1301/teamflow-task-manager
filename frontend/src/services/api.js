@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const api = axios.create({
-  baseURL: "https://teamflow-task-manager-production-cc59.up.railway.app", 
+  baseURL: "https://airy-tranquility-production-d561.up.railway.app", 
 });
 
 api.interceptors.request.use((config) => {
