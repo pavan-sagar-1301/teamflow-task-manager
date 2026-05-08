@@ -11,7 +11,7 @@ import Dashboard from "./pages/Dashboard"
 import TaskDetails from "./pages/TaskDetails"
 import Teams from "./pages/Teams"
 import Settings from "./pages/Settings"
-import Tasks from "./pages/Tasks" // <-- FIXED: Added this import
+import Tasks from "./pages/Tasks" 
 
 function App() {
 
