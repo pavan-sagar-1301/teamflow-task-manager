@@ -11,9 +11,17 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
+# --- CORRECTED CORS CONFIGURATION ---
+# This explicitly allows your local environment and your Railway frontend 
+# to talk to this backend securely.
+origins = [
+    "http://localhost:5173",
+    "https://teamflow-task-manager-production-03e2.up.railway.app"
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
