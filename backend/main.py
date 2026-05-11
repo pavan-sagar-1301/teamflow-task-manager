@@ -43,12 +43,13 @@ class UserLogin(BaseModel):
     username: str
     password: str
 
+# FIX: Added default values to prevent the 422 Unprocessable Entity error
 class TaskCreate(BaseModel):
     title: str
-    status: str
-    priority: str
-    assigned_to: str
-    project: str
+    status: str = "Pending"
+    priority: str = "Medium"
+    assigned_to: str = "Unassigned"
+    project: str = "General"
 
 class PasswordChange(BaseModel):
     current_password: str
